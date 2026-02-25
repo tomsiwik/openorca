@@ -1,0 +1,22 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "node_modules/.dev/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^build"]
+    },
+    "dev:electron": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["@openorca/backend#build", "@openorca/preload#build"]
+    },
+    "lint": { "outputs": [] },
+    "typecheck": { "outputs": [] },
+    "clean": { "cache": false }
+  }
+}

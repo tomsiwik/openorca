@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' ws: wss: http: https:; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; connect-src 'self' ws: wss: http: https:;" />
+    <title>OpenOrca</title>
+    <link rel="preload" href="/ghostty-vt.wasm" as="fetch" crossorigin />
+  </head>
+
+  <body>
+    <app></app>
+    <script type="module" src="index.tsx"></script>
+  </body>
+</html>
